@@ -18,6 +18,7 @@ namespace WebApiSwagger.Controllers
         /// Get all students
         /// </summary>
         /// <remarks>Get an array of all students</remarks>
+        /// <response code="200">Successfull Completed</response>
         /// <response code="500">Internal Server Error</response>
         [Route("")]
         [ResponseType(typeof(List<Student>))]
