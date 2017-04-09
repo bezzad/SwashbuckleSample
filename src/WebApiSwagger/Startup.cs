@@ -15,8 +15,6 @@ namespace WebApiSwagger
            
             HttpConfiguration config = new HttpConfiguration();
             
-            WebApiConfig.Register(config);
-
             // Enable Swagger (see https://github.com/domaindrivendev/Swashbuckle)
             config.EnableSwagger(c =>
              {
@@ -30,7 +28,7 @@ namespace WebApiSwagger
                  c.IncludeXmlComments(SwaggerConfig.GetXmlCommentsPath());
              }).EnableSwaggerUi();
 
-
+            WebApiConfig.Register(config);
             app.UseWebApi(config);
 
         }
